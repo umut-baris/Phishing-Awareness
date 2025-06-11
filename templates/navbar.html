@@ -1,0 +1,102 @@
+<head>
+    <title>My Chrome-like Navbar</title>
+    <style>
+      header {
+        background-color: #f1f1f1;
+        height: 48px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+      }
+      
+      .nav {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      
+      ul {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 100%;
+      }
+      
+      li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-right: 10px;
+      }
+      
+      .chrome-btn {
+        background-color: #f1f1f1;
+        border: none;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        position: relative;
+      }
+      
+      .chrome-btn:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        color: #696969;
+      }
+      
+      .chrome-btn.back-btn:before {
+        content: "<";
+      }
+      
+      .chrome-btn.forward-btn:before {
+        content: ">";
+      }
+      
+      .chrome-btn.refresh-btn:before {
+        content: "\21BB";
+      }
+      
+      .chrome-input {
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  width: 1000px;
+  height: auto;
+}
+
+.chrome-input input {
+  border: none;
+  font-size: 14px;
+  width: 250px;
+}
+      
+      .chrome-input input:focus {
+        outline: none;
+      }
+      
+      .chrome-btn:hover, .chrome-input:hover {
+        box-shadow: 0 0 5px 1px #b3b3b3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="chrome-btn back-btn"></li>
+          <li class="chrome-btn forward-btn"></li>
+          <li class="chrome-btn refresh-btn"></li>
+          <li class="chrome-input"><input id="address-bar" type="text" placeholder="Search or enter URL" value="{{url}}"></li>
+
+        </ul>
+      </nav>
+    </header>

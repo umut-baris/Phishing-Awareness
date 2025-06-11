@@ -1,0 +1,182 @@
+<!--Style goes to static-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <style>
+        * {
+             box-sizing: border-box;
+        }
+
+        .box{
+        width: auto;
+        height: auto;
+        background-color: wheat;
+        }
+
+        .box2{
+        width: 60%;
+        height: 60%;
+        border-style: ridge;
+        border-width: 5px;
+        background-color: #d1faff;
+        border-radius: 30px;
+        padding-bottom: 30px;
+
+        }
+
+
+
+        img{
+        max-width: 80%;
+        max-height: 80%;
+        display: block; /* remove extra space below image */
+        }
+       
+        /* Create two equal columns that floats next to each other */
+        .column {
+        float: left;
+        width: 50%;
+       
+       
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        .page_links{
+        text-align: center;
+        margin: auto;
+        width: 50%;
+        }
+
+        h2.headertext {
+            color: white;
+        text-align: center;
+        margin: auto;
+        font-size: 300%;
+        padding-bottom: 1%;
+        }
+
+        div.container { background: transparent; }
+        iframe.lockframe { z-index: -2; }
+
+
+        .iframe-class-1 {
+        margin: -10px;
+        padding: -5px;
+        height: 50;
+        width: 1200;
+        border-top: 2px solid #333;
+        border-left: 2px solid #333;
+        border-right: 2px solid #333;
+        border-bottom: none;
+        }
+
+        .iframe-class-2 {
+        border-top: none;
+        border-bottom: 2px solid #333;
+        border-left: 2px solid #333;
+        border-right: 2px solid #333;
+            
+        height: 800;
+        width: 1200;
+        }
+    </style>
+</head>
+
+<body>
+    
+<h2 class="headertext">Phishing Training</h2>
+
+<!--ternary operator -->
+{% if qtype == 'website'  %}
+
+<center>
+    <div class="row">
+        <div class="column">
+            <iframe src="website/navbar/{{url.0}}" height="50" width="1200" class="iframe-class-1"></iframe>
+            <iframe src="{% static '' %}{{selection.0}}" height="800" width="1200" class="iframe-class-2" sandbox></iframe>
+          
+            
+        </div>
+        <div class="column">
+            <iframe src="website/navbar/{{url.1}}" height="50" width="1200" class="iframe-class-1"></iframe>
+            <iframe src="{% static '' %}{{selection.1}}" height="800" width="1200" class="iframe-class-2" sandbox></iframe>
+          
+        </div>
+    </div>
+</center>
+<br>
+{% else %}
+
+<center>
+    <div class="row">
+        <div class="column">
+            <iframe src="body/{{selection.0}}" height="800" width="1200" sandbox></iframe>
+           
+            <br><br><br><br>
+        </div>
+        <div class="column">
+            <iframe src="body/{{selection.1}}" height="800" width="1200" sandbox></iframe>
+          <br><br><br><br>
+        </div>
+    </div>
+</center>
+
+{% endif %}
+
+    <center>
+    <div class="box2">
+    <form class="form-inline" method='POST' enctype='multipart/form-data'>{% csrf_token %}
+
+        {% if qtype == 'website'  %}
+        <h3>Identify the phisihing website(s). Please select one of the below:</h3>
+
+        {% else  %}
+        <h3>Identify the phisihing email(s). Please select one of the below:</h3>
+
+        {% endif %}
+
+        <input type="radio" id="Only left one" name="c_answer" value="Only left one">
+        <label for="Only left one">Only left one</label><br>
+
+        <input type="radio" id="Only right one" name="c_answer" value="Only right one">
+        <label for="Only right one">Only right one</label><br>
+
+        <input type="radio" id="Both of them" name="c_answer" value="Both of them">
+        <label for="Both of them">Both of them</label><br>
+       
+        <input type="hidden" id="answer" name ="answer">
+
+
+        <script>
+            document.getElementById("answer").value = '{{answer}}';
+        </script>
+
+        <!--<p>{{answer}}</p>-->
+
+        <input type="submit" value="Submit">
+      
+    </form>
+   
+
+    </div>
+    </center>
+
+    
+
+
+    
+</body>
+
+</html>

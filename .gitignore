@@ -1,0 +1,34 @@
+# Sanal ortam (virtual environment)
+venv/
+
+# Python bytecode ve cache dosyaları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite veritabanı dosyası
+db.sqlite3
+
+# Django dosyaları
+*.log
+*.pot
+*.pyc
+*.mo
+
+# Django statik dosyalarının cache'leri
+staticfiles/
+
+# Ortam değişkenleri (env dosyası varsa)
+.env
+
+# Visual Studio dosyaları
+.vs/
+
+# PyCharm veya diğer IDE dosyaları (varsa)
+.idea/
+*.iml
+
+# Sistem dosyaları (Mac, Windows)
+.DS_Store
+Thumbs.db

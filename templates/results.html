@@ -1,0 +1,73 @@
+{% load embed_video_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <style>
+        * {
+             box-sizing: border-box;
+        }
+
+        img{
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+    }
+       
+        /* Create two equal columns that floats next to each other */
+        .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        .page_links{
+        text-align: center;
+        margin: auto;
+        width: 50%;
+        }
+
+        h2.headertext {
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="headertext">YOU HAVE SCORED {{counter}} !</h2>
+
+    <center>
+        <p>YOU HAVE FINISHED THE QUIZ!!  <br>
+            Please watch the informative video below: <br>
+        </p>
+
+        {% for item in video%}
+
+            {% video item.url '800 x 450' %}
+            {{ item.tittle }}
+
+        {% endfor %}
+        
+    </center>
+
+    
+    <div class="page_links">
+      
+        
+       
+        <a href="{% url 'information' %}">Re-Attempt Quiz</a>  
+        
+    </div>
+
+</body>
+</html>

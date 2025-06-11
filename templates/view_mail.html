@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="../../static/mail/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/mail/font-awesome.min.css">
+        <link rel='stylesheet' href='../../static/mail/mail.css'>
+    </head>
+    <body>
+        <div class="container-fluid" style="padding-left:0px; padding-right:0px;">
+
+         <div class="mail-box">
+                          <aside class="sm-side">
+                              <div class="inbox-body">
+                                  <a href="#myModal" title="Compose"    class="btn btn-compose">
+                                      Compose
+                                  </a>
+                                  <!-- Modal -->
+                                  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
+                                      <div class="modal-dialog">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                                  <h4 class="modal-title">Compose</h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <form role="form" class="form-horizontal">
+                                                      <div class="form-group">
+                                                          <label class="col-lg-2 control-label">To</label>
+                                                          <div class="col-lg-10">
+                                                              <input type="text" placeholder="" id="inputEmail1" class="form-control">
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label class="col-lg-2 control-label">Cc / Bcc</label>
+                                                          <div class="col-lg-10">
+                                                              <input type="text" placeholder="" id="cc" class="form-control">
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label class="col-lg-2 control-label">Subject</label>
+                                                          <div class="col-lg-10">
+                                                              <input type="text" placeholder="" id="inputPassword1" class="form-control">
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label class="col-lg-2 control-label">Message</label>
+                                                          <div class="col-lg-10">
+                                                              <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                                                          </div>
+                                                      </div>
+
+                                                      <div class="form-group">
+                                                          <div class="col-lg-offset-2 col-lg-10">
+                                                              <span class="btn green fileinput-button">
+                                                                <i class="fa fa-plus fa fa-white"></i>
+                                                                <span>Attachment</span>
+                                                                <input type="file" name="files[]" multiple="">
+                                                              </span>
+                                                              <button class="btn btn-send" type="submit">Send</button>
+                                                          </div>
+                                                      </div>
+                                                  </form>
+                                              </div>
+                                          </div><!-- /.modal-content -->
+                                      </div><!-- /.modal-dialog -->
+                                  </div><!-- /.modal -->
+                              </div>
+                              <ul class="inbox-nav inbox-divider">
+                                  <li class="active">
+                                      <a ></i> Inbox </a>
+
+                                  </li>
+                                  <li>
+                                      <a ></i> Sent Mail</a>
+                                  </li>
+                                  <li>
+                                      <a ></i> Important</a>
+                                  </li>
+                                  <li>
+                                      <a ></i> Drafts <!--<span class="label label-info pull-right">30</span>--></a>
+                                  </li>
+                                  <li>
+                                      <a ></i> Trash</a>
+                                  </li>
+                              </ul>
+                              <!--<ul class="nav nav-pills nav-stacked labels-info inbox-divider">
+                                  <li> <h4>Labels</h4> </li>
+                                  <li> <a > <i class=" fa fa-sign-blank text-danger"></i> Work </a> </li>
+                                  <li> <a > <i class=" fa fa-sign-blank text-success"></i> Design </a> </li>
+                                  <li> <a > <i class=" fa fa-sign-blank text-info "></i> Family </a>
+                                  </li><li> <a > <i class=" fa fa-sign-blank text-warning "></i> Friends </a>
+                                  </li><li> <a > <i class=" fa fa-sign-blank text-primary "></i> Office </a>
+                                  </li>
+                              </ul>
+                              <ul class="nav nav-pills nav-stacked labels-info ">
+                                  <li> <h4>Buddy online</h4> </li>
+                                  <li> <a > <i class=" fa fa-circle text-success"></i>Alireza Zare <p>I do not think</p></a>  </li>
+                                  <li> <a > <i class=" fa fa-circle text-danger"></i>Dark Coders<p>Busy with coding</p></a> </li>
+                                  <li> <a > <i class=" fa fa-circle text-muted "></i>Mentaalist <p>I out of control</p></a>
+                                  </li><li> <a > <i class=" fa fa-circle text-muted "></i>H3s4m<p>I am not here</p></a>
+                                  </li><li> <a > <i class=" fa fa-circle text-muted "></i>Dead man<p>I do not think</p></a>
+                                  </li>
+                              </ul>-->
+
+                              <!--<div class="inbox-body text-center">
+                                  <div class="btn-group">
+                                      <a class="btn mini btn-primary" href="javascript:;">
+                                          <i class="fa fa-plus"></i>
+                                      </a>
+                                  </div>
+                                  <div class="btn-group">
+                                      <a class="btn mini btn-success" href="javascript:;">
+                                          <i class="fa fa-phone"></i>
+                                      </a>
+                                  </div>
+                                  <div class="btn-group">
+                                      <a class="btn mini btn-info" href="javascript:;">
+                                          <i class="fa fa-cog"></i>
+                                      </a>
+                                  </div>
+                              </div>-->
+
+                          </aside>
+                          <aside class="lg-side">
+                              <!--<div class="inbox-head">
+                                  <h3>Inbox</h3>
+                                  <form action="#" class="pull-right position">
+                                      <div class="input-append">
+                                          <input type="text" class="sr-input" placeholder="Search Mail">
+                                          <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+                                      </div>
+                                  </form>
+                              </div>-->
+                              <div class="inbox-body">
+                                 <div class="mail-option">
+                                     <div class="chk-all">
+                                         <input type="checkbox" class="mail-checkbox mail-group-checkbox">
+                                         <div class="btn-group">
+                                             <a class="btn mini all" aria-expanded="false">
+                                                 All
+                                                 <i class="fa fa-angle-down "></i>
+                                             </a>
+                                             <ul class="dropdown-menu">
+                                                 <li><a > None</a></li>
+                                                 <li><a > Read</a></li>
+                                                 <li><a > Unread</a></li>
+                                             </ul>
+                                         </div>
+                                     </div>
+
+                                     <div class="btn-group">
+                                         <a data-original-title="Refresh" data-placement="top" class="btn mini tooltips">
+                                             <i class=" fa fa-refresh"></i>
+                                         </a>
+                                     </div>
+                                     <div class="btn-group hidden-phone">
+                                         <a class="btn mini blue" aria-expanded="false">
+                                             More
+                                             <i class="fa fa-angle-down "></i>
+                                         </a>
+                                         <ul class="dropdown-menu">
+                                             <li><a ><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                             <li><a ><i class="fa fa-ban"></i> Spam</a></li>
+                                             <li class="divider"></li>
+                                             <li><a ><i class="fa fa-trash-o"></i> Delete</a></li>
+                                         </ul>
+                                     </div>
+                                     <div class="btn-group">
+                                         <!--<a data-toggle="dropdown" class="btn mini blue">
+                                             Move to
+                                             <i class="fa fa-angle-down "></i>
+                                         </a>-->
+                                         <ul class="dropdown-menu">
+                                             <li><a ><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                             <li><a ><i class="fa fa-ban"></i> Spam</a></li>
+                                             <li class="divider"></li>
+                                             <li><a ><i class="fa fa-trash-o"></i> Delete</a></li>
+                                         </ul>
+                                     </div>
+
+                                     <ul class="unstyled inbox-pagination">
+                                         <li><span>1-2 of 2</span></li>
+                                         <li>
+                                             <a class="np-btn" ><i class="fa fa-angle-left  pagination-left"></i></a>
+                                         </li>
+                                         <li>
+                                             <a class="np-btn" ><i class="fa fa-angle-right pagination-right"></i></a>
+                                         </li>
+                                     </ul>
+                                 </div>
+                                 <div class="col-lg email-content">
+                                               <div class="email-head">
+                                                 <div class="email-head-subject">
+                                                   <div class="title d-flex align-items-center justify-content-between">
+                                                     <div class="icons">
+                                                       <a  class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share text-muted hover-primary-muted" title="" data-original-title="Forward"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg></a>
+                                                       <a  class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer text-muted" title="" data-original-title="Print"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg></a>
+                                                       <a  class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash text-muted" title="" data-original-title="Delete"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                                       </a>
+                                                     </div>
+                                                   </div>
+                                                 </div>
+                                                 <div class="email-head-sender d-flex align-items-center justify-content-between flex-wrap">
+                                                   <div class="d-flex align-items-center">
+
+                                                     <div class="sender d-flex align-items-center">
+                                                        {% block titfrom %}
+
+                                                        <!-- Title And Sender -->
+                                                        
+                                                        {% endblock titfrom %}
+
+                                                       <div class="actions dropdown">
+
+                                                         <div class="dropdown-menu" role="menu">
+                                                           <a class="dropdown-item" >Mark as read</a>
+                                                           <a class="dropdown-item" >Mark as unread</a>
+                                                           <a class="dropdown-item" >Spam</a>
+                                                           <div class="dropdown-divider"></div>
+                                                           <a class="dropdown-item text-danger" >Delete</a>
+                                                         </div>
+                                                       </div>
+                                                     </div>
+                                                   </div>
+                                                 </div>
+                                               </div>
+                                               <div class="email-body">
+                          
+
+                                                 {% block content %}
+
+                                                <!-- Mail Content -->
+
+                                                 {% endblock %}
+
+                                               </div>
+                                             </div>
+
+                              </div>
+                          </aside>
+                      </div>
+        </div>
+        <script type="text/javascript" src="../../static/mail/jquery.min.js"></script>
+        <script type="text/javascript" src="../../static/mail/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+        </script>
+    </body>
+
+</html>
